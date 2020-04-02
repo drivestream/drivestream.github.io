@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JW Developer - HTTP Stream Tester</title>
+    <link rel="stylesheet" href="/developer.css">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        #stream-tester-player iframe {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .item-about{
+            padding-top: 10px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page" id="stream-tester">
+        <div class="mkdocs-jwplayer">
+            <div class="alert warning">
+                <strong style="font-size: 18px;">About DriveStream</strong>
+                <ul>
+                    <li class="item-about" >DriveStream proxy video from Google Drive video file. So, it can play as soon as your drive file is ready.</li>
+                    <li class="item-about">The service is free, and it has some limitation for each guest user (rate limit per ip/domain, low resolution, have ads). </li>
+                    <li class="item-about">If you want to get full feature, please contact us at our facebook page </li>
+                </ul>
+                
+
+            </div>
+        </div>
+        <div>
+            <div class="jw-tool">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="column sm-12 lg-6">
+
+                            <div class="tool-settings">
+
+                                <div class="configuration">
+                                    <h2>File URL:</h2>
+                                    <input style="width:100%" id="file" type="text" placeholder="Enter a drive URL"
+                                        value="https://drive.google.com/file/d/0B6ofTfK8k1_sSWZYLUo4OEpKajA/view">
+                                </div>
+
+                                <div class="button-set">
+                                    <button id="teststream-btn" class="button button-sm" type="button"
+                                        name="button">Test Stream</button>
+                                </div>
+
+
+                                <div id="test-output" class="test-output test-output-visible">
+                                    <h2>Get Embed Url</h2>
+                                    <pre><code id="api-url" class="hljs" style="white-space: pre-wrap;overflow-x:hidden">
+                                    </code></pre>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="column sm-12 lg-6">
+                            <div class="tool-player">
+                                <div class="player-preview">TEST PLAYER</div>
+                                <div id="stream-tester-player"
+                                    style="position: relative;padding-bottom: 56.2%;text-align:initial">
+                                </div>
+                            </div>
+                            <div id="test-output" class="test-output test-output-visible">
+                                <h2>Example Get Player API</h2>
+                                <pre><code id="api-code" class="hljs" style="white-space: pre-wrap;overflow-x:hidden">
+                                </code></pre>
+                            </div>
+
+                            <div id="test-output" class="test-output test-output-visible">
+                                <h2>Embed Player</h2>
+                                <pre><code id="embed-code" class="hljs" style="white-space: pre-wrap;overflow-x:hidden">
+                                </code></pre>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
