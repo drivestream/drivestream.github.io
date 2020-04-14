@@ -1,4 +1,4 @@
-document.querySelector('#api-url').innerText = 'https://getplayer.thundersave.com/?id=<your_drive_link>';
+document.querySelector('#api-url').innerText = 'https://getplayer.thundersave.com/?key=demo&id=<your_drive_link>';
 function updatePlayer() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -7,12 +7,12 @@ function updatePlayer() {
                 '#stream-tester-player'
             ).innerHTML = `<iframe src="${this.responseText}"  frameborder="0" scrolling="no" allowfullscreen></iframe>`;
 
-            document.querySelector('#api-code').innerText = `https://getplayer.thundersave.com/?id=${document.querySelector('input').value}`;
+            document.querySelector('#api-code').innerText = `https://getplayer.thundersave.com/?key=demo&id=${document.querySelector('input').value}`;
 
             document.querySelector('#embed-code').innerText = `<iframe src="${this.responseText}"  frameborder="0" scrolling="no" allowfullscreen></iframe>`;
         }
     };
-    xhttp.open('GET', `https://getplayer.thundersave.com/?id=${document.querySelector('input').value}`, true);
+    xhttp.open('GET', `https://getplayer.thundersave.com/?key=demo&id=${document.querySelector('input').value}`, true);
     xhttp.send();
 }
 document.querySelector('#teststream-btn').addEventListener('click', function() {
